@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORD-SCRAMBLE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="words.js" ></script>
+</head>
+<body>
+    <div class="container">
+          <h2>Word Scramble</h2><span onclick="hintClick()" class="hint-icon">💡</span>
+          <div class="content">
+            <img src="/timeout.jpg" alt="" class="imghint">
+            <p class="word"></p>
+            <div class="details">
+                <!-- <div>Hint?</div> -->
+                <p class="hint">Hint :  <span></span></p>
+                <p class="time">Time Left:<span><b>30</b></span></p>
+            </div>
+            <input class="input inputs"  type="text" placeholder="Enter a valid word">
+            <div class="buttons">
+                <button class="refresh-word">Refresh word</button>
+                <button class="check-word">check word</button>
+
+            </div>
+          </div>
+    </div>
+    <div class ="popup" id="popup">
+        <img src="/tick.jpeg" alt="">
+        <h2>WIN!🎊🎊🎊</h2>
+        <button onclick="closepopup()">OK</button>  
+    </div>
+
+    <!-- popup screen for  wrong answer -->
+    <div class="win" id="hint-answer">
+        <img src="/tick.jpeg" alt="">
+        <h2>Correct Answer: <span id="answer-span"></span></h2>
+        <div>
+             <button class="refreshb" onclick="window.location.reload()">Retry</button>
+             <!-- <button>HINT.</button> -->
+            </div>
+    </div>
+
+    <!-- popup screen for  wrong answer -->
+    <div class="win" id="win">
+        <img src="/incorrect.jpg" alt="">
+        <h2>WRONG!!😵‍💫😵‍💫</h2>
+        <div>
+             <button class="refreshb" onclick="window.location.reload()">Refresh</button>
+             <!-- <button>HINT.</button> -->
+            </div>
+    </div>
+    <!-- popup screen for timeout -->
+    <div class="timeout" id="timeout">
+        <img src="/timeout.jpg" alt="">
+        <h2>TIME-OUT〽️〽️</h2>
+        <button onclick="closetimeout()">NEXT</button>
+    </div>
+
+    <div id="video-container" class="video-wrapper">
+        <div class="youtube-video" id="player"></div>
+    </div>
+    
+
+</body>
+</html>
